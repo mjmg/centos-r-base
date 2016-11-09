@@ -9,7 +9,7 @@ RUN \
 
 # Install OpenJDK7 and R
 RUN \
-  yum install -y java-1.7.0-openjdk-headless R
+  yum install -y java-1.8.0-openjdk-headless R
   
 # Setup default cran repo
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
