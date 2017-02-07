@@ -7,7 +7,7 @@ RUN \
   yum upgrade -y && \
   yum install -y epel-release
 
-# Install OpenJDK7 and R
+# Install OpenJDK8 and R
 RUN \
   yum install -y java-1.8.0-openjdk-headless R
   
