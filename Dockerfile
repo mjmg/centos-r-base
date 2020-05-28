@@ -3,7 +3,7 @@ FROM mjmg/centos-supervisor-base:latest
 
 # Update System Image and install EPEL
 RUN \
-  dnf config-manager --set-enabled PowerTools
+  dnf config-manager --set-enabled PowerTools && \
   dnf update -y && \
   dnf upgrade -y && \
   dnf install -y epel-release
