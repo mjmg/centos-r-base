@@ -3,6 +3,7 @@ FROM mjmg/centos-supervisor-base:latest
 
 # Update System Image and install EPEL
 RUN \
+  dnf config-manager --set-enabled PowerTools
   dnf update -y && \
   dnf upgrade -y && \
   dnf install -y epel-release
@@ -11,7 +12,7 @@ RUN \
 RUN \
   dnf install -y java-11-openjdk-headless 
 RUN \
-  dnf install -y R R-devel R-core-devel
+  dnf install -y R
   
 # Setup default cran repo
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'http://cran.us.r-project.org'; options(repos = r);" > ~/.Rprofile
